@@ -2381,7 +2381,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "program_hello_world"
+name = "programs_hello_world"
 version = "0.0.1"
 dependencies = [
  "borsh",

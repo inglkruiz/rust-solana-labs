@@ -1,0 +1,12 @@
+{
+  "name": "programs_hello_world",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/programs/hello-world/src",
+  "targets": {
+    "build": {
+      "command": "cargo build-bpf --manifest-path libs/programs/hello-world/Cargo.toml --bpf-out-dir dist/libs/programs/hello-world"
+    }
+  },
+  "tags": ["type:program"]
+}

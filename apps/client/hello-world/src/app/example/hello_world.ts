@@ -42,7 +42,7 @@ let greetedPubkey: PublicKey;
  */
 const PROGRAM_PATH = path.resolve(
   __dirname,
-  '../../../libs/program/hello-world'
+  '../../../libs/programs/hello-world'
 );
 
 /**
@@ -55,7 +55,7 @@ const PROGRAM_SO_PATH = path.join(PROGRAM_PATH, 'hello_world.so');
 
 /**
  * Path to the keypair of the deployed program.
- * This file is created when running `solana program deploy dist/program/hello_world.so`
+ * This file is created when running `solana program deploy dist/programs/hello_world.so`
  */
 const PROGRAM_KEYPAIR_PATH = path.join(
   PROGRAM_PATH,
@@ -147,7 +147,7 @@ export async function checkProgram(): Promise<void> {
   } catch (err) {
     const errMsg = (err as Error).message;
     throw new Error(
-      `Failed to read program keypair at '${PROGRAM_KEYPAIR_PATH}' due to error: ${errMsg}. Program may need to be deployed with \`solana program deploy dist/program/hello_world.so\``
+      `Failed to read program keypair at '${PROGRAM_KEYPAIR_PATH}' due to error: ${errMsg}. Program may need to be deployed with \`solana program deploy dist/programs/hello_world.so\``
     );
   }
 
@@ -156,7 +156,7 @@ export async function checkProgram(): Promise<void> {
   if (programInfo === null) {
     if (fs.existsSync(PROGRAM_SO_PATH)) {
       throw new Error(
-        'Program needs to be deployed with `solana program deploy dist/program/hello_world.so`'
+        'Program needs to be deployed with `solana program deploy dist/programs/hello_world.so`'
       );
     } else {
       throw new Error('Program needs to be built and deployed');

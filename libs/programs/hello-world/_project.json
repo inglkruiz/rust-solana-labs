@@ -1,8 +1,8 @@
 {
-  "name": "program_hello_world",
+  "name": "programs_hello_world",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "libs/program/hello-world/src",
+  "sourceRoot": "libs/programs/hello-world/src",
   "targets": {
     "test": {
       "executor": "@nxrs/cargo:test",

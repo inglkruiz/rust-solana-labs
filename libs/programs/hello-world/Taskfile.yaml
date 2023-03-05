@@ -26,20 +26,20 @@ tasks:
   build:
     desc: Build the program
     cmds:
-      - cargo build-bpf --manifest-path libs/program/hello-world/Cargo.toml --bpf-out-dir dist/libs/program/hello-world
+      - cargo build-bpf --manifest-path libs/programs/hello-world/Cargo.toml --bpf-out-dir dist/libs/programs/hello-world
 
   test:
     desc: Run the program tests
     cmds:
-      - cargo test-bpf --manifest-path libs/program/hello-world/Cargo.toml
+      - cargo test-bpf --manifest-path libs/programs/hello-world/Cargo.toml
 
   clean:
     desc: Clean the program
     cmds:
-      - cargo clean --manifest-path libs/program/hello-world/Cargo.toml && rm -rf dist/libs/program/hello-world
+      - cargo clean --manifest-path libs/programs/hello-world/Cargo.toml && rm -rf dist/libs/programs/hello-world
 
   deploy:
     desc: Deploy the program
     cmds:
-      - solana program deploy dist/libs/program/hello-world/hello_world.so
+      - solana program deploy dist/libs/programs/hello-world/hello_world.so
 

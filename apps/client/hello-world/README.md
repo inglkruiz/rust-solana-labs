@@ -2,7 +2,7 @@
 
 ## Run the application
 
-NOTE: Solana cluster must be running adn the smart contract must be deployed. See [libs/program/hello-world/README.md](../../../libs/program/hello-world/README.md) for more information.
+NOTE: Solana cluster must be running adn the smart contract must be deployed. See [libs/programs/hello-world/README.md](../../../libs/programs/hello-world/README.md) for more information.
 
 - Open a terminal front the root folder of the repository. Run `pn nx run client-hello-world:serve` to start the application.
 

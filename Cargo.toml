@@ -1,5 +1,5 @@
 [workspace]
 members = [
     "apps/rust/http-server",
-    "libs/program/hello-world"
+    "libs/programs/hello-world"
 ]
