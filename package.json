@@ -5,6 +5,7 @@
   "scripts": {},
   "private": true,
   "devDependencies": {
+    "@nrwl/nest": "^15.8.5",
     "@nrwl/nx-cloud": "latest",
     "@nrwl/workspace": "15.8.5",
     "@nxrs/cargo": "^0.3.3",

@@ -1,0 +1,8 @@
+# https://taskfile.dev
+
+version: '3'
+
+includes:
+  program_hello_world:
+    taskfile: ./libs/program/hello-world
+    dir: ./

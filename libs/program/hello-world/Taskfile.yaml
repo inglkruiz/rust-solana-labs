@@ -1,0 +1,45 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  start-validator:
+    desc: Start a local validator and tail the logs
+    silent: true
+    cmds:
+      - |
+        osascript -e 'tell application "iTerm2"
+          set newWindow to (create window with default profile)
+
+          tell current session of newWindow
+            split horizontally with default profile
+          end tell
+
+          tell first session of current tab of current window
+            write text "solana-test-validator --reset"
+          end tell
+          tell second session of current tab of current window
+            write text "sleep 10 && solana logs"
+          end tell
+        end tell'
+
+  build:
+    desc: Build the program
+    cmds:
+      - cargo build-bpf --manifest-path libs/program/hello-world/Cargo.toml --bpf-out-dir dist/libs/program/hello-world
+
+  test:
+    desc: Run the program tests
+    cmds:
+      - cargo test-bpf --manifest-path libs/program/hello-world/Cargo.toml
+
+  clean:
+    desc: Clean the program
+    cmds:
+      - cargo clean --manifest-path libs/program/hello-world/Cargo.toml && rm -rf dist/libs/program/hello-world
+
+  deploy:
+    desc: Deploy the program
+    cmds:
+      - solana program deploy dist/libs/program/hello-world/hello_world.so
+
