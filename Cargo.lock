@@ -2701,6 +2701,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "rust_http_server"
+version = "0.0.1"
+
+[[package]]
 name = "rustc-demangle"
 version = "0.1.21"
 source = "registry+https://github.com/rust-lang/crates.io-index"
