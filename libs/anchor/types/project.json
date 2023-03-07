@@ -1,16 +1,17 @@
 {
-  "name": "anchor-tests",
+  "name": "anchor-types",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/anchor/types/src",
   "projectType": "library",
-  "sourceRoot": "libs/anchor/tests/src",
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/anchor/tests/**/*.ts"]
+        "lintFilePatterns": ["libs/anchor/types/**/*.ts"]
       }
     }
   },
-  "tags": ["type:program-tests"]
+  "tags": ["type:program-types"],
+  "implicitDependencies": ["anchor_programs_basic_1"]
 }

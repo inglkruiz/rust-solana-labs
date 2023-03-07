@@ -14,7 +14,7 @@ tasks:
       - ../../target/idl/basic_1.json
     cmds:
       - anchor build
-      - cp ../../target/types/basic_1.ts ../../tests/src/types/basic_1.ts
+      - cp ../../target/types/basic_1.ts ../../types/src/lib/basic_1.ts
 
   test:
     desc: Run the program tests

@@ -1,7 +1,7 @@
 import * as anchor from '@project-serum/anchor';
 import { Program } from '@project-serum/anchor';
+import { Basic1 } from '@rust-solana-labs/anchor/types';
 import assert from 'assert';
-import { Basic1 } from './types/basic_1';
 const { SystemProgram } = anchor.web3;
 
 describe('basic-1', () => {
