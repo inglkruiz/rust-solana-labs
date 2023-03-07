@@ -33,6 +33,9 @@
       ],
       "@rust-solana-labs/solana-workshops/nft-minter/utils": [
         "libs/solana-workshops/nft-minter/utils/src/index.ts"
+      ],
+      "@rust-solana-labs/solana-workshops/nft-minter/views": [
+        "libs/solana-workshops/nft-minter/views/src/index.ts"
       ]
     }
   },
