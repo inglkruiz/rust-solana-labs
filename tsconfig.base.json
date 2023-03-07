@@ -22,6 +22,9 @@
       "@rust-solana-labs/solana-workshops/nft-minter/contexts": [
         "libs/solana-workshops/nft-minter/contexts/src/index.ts"
       ],
+      "@rust-solana-labs/solana-workshops/nft-minter/hooks": [
+        "libs/solana-workshops/nft-minter/hooks/src/index.ts"
+      ],
       "@rust-solana-labs/solana-workshops/nft-minter/models": [
         "libs/solana-workshops/nft-minter/models/src/index.ts"
       ],
