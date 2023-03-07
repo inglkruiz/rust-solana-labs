@@ -22,6 +22,9 @@
       "@rust-solana-labs/solana-workshops/nft-minter/contexts": [
         "libs/solana-workshops/nft-minter/contexts/src/index.ts"
       ],
+      "@rust-solana-labs/solana-workshops/nft-minter/stores": [
+        "libs/solana-workshops/nft-minter/stores/src/index.ts"
+      ],
       "@rust-solana-labs/solana-workshops/nft-minter/utils": [
         "libs/solana-workshops/nft-minter/utils/src/index.ts"
       ]

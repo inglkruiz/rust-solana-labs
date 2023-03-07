@@ -5,9 +5,9 @@ import {
 } from '@heroicons/react/outline';
 import { XIcon } from '@heroicons/react/solid';
 import { useNetworkConfiguration } from '@rust-solana-labs/solana-workshops/nft-minter/contexts';
+import { useNotificationStore } from '@rust-solana-labs/solana-workshops/nft-minter/stores';
 import { useConnection } from '@solana/wallet-adapter-react';
 import { useEffect } from 'react';
-import useNotificationStore from '../stores/useNotificationStore';
 
 const NotificationList = () => {
   const { notifications, set: setNotificationStore } = useNotificationStore(
