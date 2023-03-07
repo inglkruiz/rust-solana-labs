@@ -1,10 +1,12 @@
 import { PublicKey } from '@metaplex-foundation/js';
 import { useNetworkConfiguration } from '@rust-solana-labs/solana-workshops/nft-minter/contexts';
+import {
+  mintWithMetaplexJs,
+  notify,
+} from '@rust-solana-labs/solana-workshops/nft-minter/utils';
 import { useConnection, useWallet } from '@solana/wallet-adapter-react';
 import Image from 'next/image';
 import { FC, useCallback, useState } from 'react';
-import { mintWithMetaplexJs } from 'utils/metaplex';
-import { notify } from 'utils/notifications';
 
 const TOKEN_NAME = 'Solana Workshop NFT';
 const TOKEN_SYMBOL = 'SHOP';
