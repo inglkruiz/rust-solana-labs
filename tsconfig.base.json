@@ -16,6 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@rust-solana-labs/anchor/types": ["libs/anchor/types/src/index.ts"],
+      "@rust-solana-labs/solana-workshops/nft-minter/components": [
+        "libs/solana-workshops/nft-minter/components/src/index.ts"
+      ],
       "@rust-solana-labs/solana-workshops/nft-minter/contexts": [
         "libs/solana-workshops/nft-minter/contexts/src/index.ts"
       ]
