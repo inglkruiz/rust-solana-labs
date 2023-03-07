@@ -46,3 +46,6 @@ Thumbs.db
 
 # Go Taskfile runner
 .task
+
+# Next.js
+.next

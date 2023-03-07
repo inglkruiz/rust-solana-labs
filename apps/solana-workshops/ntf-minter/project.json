@@ -1,0 +1,71 @@
+{
+  "name": "solana-workshops-ntf-minter",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/solana-workshops/ntf-minter",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/solana-workshops/ntf-minter",
+        "outputPath": "dist/apps/solana-workshops/ntf-minter"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/solana-workshops/ntf-minter"
+        },
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "solana-workshops-ntf-minter:build",
+        "dev": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "solana-workshops-ntf-minter:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "solana-workshops-ntf-minter:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nrwl/next:export",
+      "options": {
+        "buildTarget": "solana-workshops-ntf-minter:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/solana-workshops/ntf-minter/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/solana-workshops/ntf-minter/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
