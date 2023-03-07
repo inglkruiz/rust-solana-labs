@@ -1,0 +1,8 @@
+{
+  "name": "anchor_tests",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/anchor/tests/src",
+  "targets": {},
+  "tags": ["type:program-tests"]
+}

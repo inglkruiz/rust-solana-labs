@@ -37,4 +37,12 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-/target
+
+# Rust
+**/target
+
+# Anchor framework
+**/.anchor
+
+# Go Taskfile runner
+.task

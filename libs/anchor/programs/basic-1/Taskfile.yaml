@@ -1,0 +1,33 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  build:
+    desc: Build the program
+    sources:
+      - src/**/*.rs
+    generates:
+      - ../../target/deploy/basic_1.so
+      - ../../target/deploy/basic_1-keypair.json
+      - ../../target/types/basic_1.ts
+      - ../../target/idl/basic_1.json
+    cmds:
+      - anchor build
+      - cp ../../target/types/basic_1.ts ../../tests/src/types/basic_1.ts
+
+  test:
+    desc: Run the program tests
+    cmds:
+      - anchor test
+
+  clean:
+    desc: Clean the program
+    cmds:
+      - anchor clean
+
+  deploy:
+    desc: Deploy the program
+    cmds:
+      - anchor deploy
+

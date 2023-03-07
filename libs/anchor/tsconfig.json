@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "outDir": "../../dist/out-tsc",
+    "module": "commonjs",
+    "types": ["mocha", "chai"],
+  },
+  "files": [],
+  "include": [
+    "tests/**/*.ts"
+  ]
+}

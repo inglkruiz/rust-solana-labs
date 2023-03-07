@@ -3,6 +3,10 @@
 version: '3'
 
 includes:
-  program_hello_world:
+  programs_hello_world:
     taskfile: ./libs/programs/hello-world
-    dir: ./
+  anchor:
+    taskfile: ./libs/anchor
+  anchor_programs_basic_1:
+    taskfile: ./libs/anchor/programs/basic-1
+    dir: ./libs/anchor/programs/basic-1

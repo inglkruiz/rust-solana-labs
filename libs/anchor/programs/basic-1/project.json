@@ -1,0 +1,8 @@
+{
+  "name": "anchor_programs_basic_1",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/anchor/programs/basic-1/src",
+  "targets": {},
+  "tags": ["type:program"]
+}
