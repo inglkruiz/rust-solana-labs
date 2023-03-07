@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@rust-solana-labs/anchor/types": ["libs/anchor/types/src/index.ts"]
+      "@rust-solana-labs/anchor/types": ["libs/anchor/types/src/index.ts"],
+      "@rust-solana-labs/solana-workshops/nft-minter/contexts": [
+        "libs/solana-workshops/nft-minter/contexts/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
