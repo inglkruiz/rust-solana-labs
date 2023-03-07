@@ -12,6 +12,9 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  env: {
+    RPC_ENDPOINT: process.env.RPC_ENDPOINT,
+  },
 };
 
 module.exports = withNx(nextConfig);
