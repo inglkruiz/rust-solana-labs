@@ -1,5 +1,6 @@
 /* tslint:disable:no-empty */
 import { cn } from '@rust-solana-labs/solana-workshops/nft-minter/utils';
+import _noop from 'lodash/noop';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useRef } from 'react';
@@ -21,7 +22,7 @@ const NavElement = ({
   as,
   scroll,
   disabled,
-  navigationStarts = () => {},
+  navigationStarts = _noop,
 }: NavElementProps) => {
   const router = useRouter();
   const isActive = href === router.asPath || (as && as === router.asPath);
@@ -46,7 +47,7 @@ const NavElement = ({
       passHref
       className={cn(
         'group flex h-full flex-col items-center justify-between',
-        disabled && 'pointer-events-none cursor-not-allowed opacity-50'
+        disabled ? 'pointer-events-none cursor-not-allowed opacity-50' : ''
       )}
       onClick={() => navigationStarts()}
     >

@@ -36,7 +36,8 @@
       ],
       "@rust-solana-labs/solana-workshops/nft-minter/views": [
         "libs/solana-workshops/nft-minter/views/src/index.ts"
-      ]
+      ],
+      "lodash/*": ["node_modules/@types/lodash-es/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,0 +1,7 @@
+{
+  "name": "solana-workshops-nft-minter-stores",
+  "packageManager": "pnpm@7.28.0",
+  "dependencies": {
+    "zustand": "^3.7.2"
+  }
+}

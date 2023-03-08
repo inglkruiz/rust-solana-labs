@@ -1,8 +1,14 @@
+import {
+  AppBar,
+  ContentContainer,
+  Footer,
+  NotificationList,
+} from '@rust-solana-labs/solana-workshops/nft-minter/components';
+import { ContextProvider } from '@rust-solana-labs/solana-workshops/nft-minter/contexts';
+import '@solana/wallet-adapter-react-ui/styles.css';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import '@solana/wallet-adapter-react-ui/styles.css';
 import './styles.css';
-import { ContextProvider } from '@rust-solana-labs/solana-workshops/nft-minter/contexts';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
@@ -13,7 +19,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
 
       <ContextProvider>
         <div className="flex flex-col h-screen">
-          <Notifications />
+          <NotificationList />
           <AppBar />
           <ContentContainer>
             <Component {...pageProps} />

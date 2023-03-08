@@ -1,20 +1,18 @@
-import useNotificationStore from "../stores/useNotificationStore";
+import { useNotificationStore } from '@rust-solana-labs/solana-workshops/nft-minter/stores';
 
 export function notify(newNotification: {
-  type?: string
-  message: string
-  description?: string
-  txid?: string
+  type?: string;
+  message: string;
+  description?: string;
+  txid?: string;
 }) {
-  const {
-    notifications,
-    set: setNotificationStore,
-  } = useNotificationStore.getState()
+  const { notifications, set: setNotificationStore } =
+    useNotificationStore.getState();
 
   setNotificationStore((state: { notifications: any[] }) => {
     state.notifications = [
       ...notifications,
       { type: 'success', ...newNotification },
-    ]
-  })
+    ];
+  });
 }
