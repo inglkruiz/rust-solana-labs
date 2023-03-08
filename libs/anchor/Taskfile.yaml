@@ -23,12 +23,6 @@ tasks:
           end tell
         end tell'
 
-
-  # test:
-  #   desc: Run the program tests
-  #   cmds:
-  #     - anchor test
-
   deep-clean:
     desc: Clean the target and .anchor directories
     cmds:

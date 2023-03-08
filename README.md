@@ -12,6 +12,7 @@
 ### Libs
 
 - [programs/hello-world](libs/programs/hello-world/README.md): Solana smart contract program. Borrowed from the [solana-labs/example-helloworld](https://www.github.com/solana-labs/example-helloworld) repository. I preferred not to use the repository since I'm building a curated list of examples for myself powered by Nx monorepo.
+- [anchor](libs/anchor/README.md): Anchor framework folder setup containing programs, tests, and types.
 
 ### Install dependencies
 
