@@ -1,0 +1,12 @@
+{
+  "name": "programs_escrow",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/programs/escrow/src",
+  "targets": {
+    "build": {
+      "command": "cargo build-bpf --manifest-path libs/programs/escrow/Cargo.toml --bpf-out-dir dist/libs/programs/escrow"
+    }
+  },
+  "tags": ["type:program"]
+}

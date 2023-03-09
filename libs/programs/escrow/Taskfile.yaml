@@ -1,0 +1,25 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  build:
+    desc: Build the program
+    cmds:
+      - cargo build-bpf --manifest-path libs/programs/escrow/Cargo.toml --bpf-out-dir dist/libs/programs/escrow
+
+  test:
+    desc: Run the program tests
+    cmds:
+      - cargo test-bpf --manifest-path libs/programs/escrow/Cargo.toml
+
+  clean:
+    desc: Clean the program
+    cmds:
+      - cargo clean --manifest-path libs/programs/escrow/Cargo.toml && rm -rf dist/libs/programs/escrow
+
+  deploy:
+    desc: Deploy the program
+    cmds:
+      - solana program deploy dist/libs/programs/escrow/escrow.so
+

@@ -2381,6 +2381,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "programs_escrow"
+version = "0.1.0"
+dependencies = [
+ "arrayref",
+ "solana-program",
+ "spl-token",
+ "thiserror",
+]
+
+[[package]]
 name = "programs_hello_world"
 version = "0.1.0"
 dependencies = [
