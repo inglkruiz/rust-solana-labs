@@ -47,8 +47,8 @@ const alice = async () => {
     newAccountPubkey: tempXTokenAccountKeypair.publicKey,
   });
   const initTempAccountIx = createInitializeAccountInstruction(
-    XTokenMintPubkey,
     tempXTokenAccountKeypair.publicKey,
+    XTokenMintPubkey,
     aliceKeypair.publicKey,
     TOKEN_PROGRAM_ID
   );
