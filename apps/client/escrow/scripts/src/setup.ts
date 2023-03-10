@@ -95,10 +95,10 @@ const setup = async () => {
   console.log("Sending 50X to Alice's X TokenAccount...");
   await solanaMintTo(
     connection,
-    aliceKeypair,
+    clientKeypair,
     mintX,
     aliceTokenAccountForX,
-    clientKeypair.publicKey,
+    clientKeypair,
     50
   );
 
@@ -112,10 +112,10 @@ const setup = async () => {
   console.log("Sending 50Y to Bob's Y TokenAccount...");
   await solanaMintTo(
     connection,
-    bobKeypair,
+    clientKeypair,
     mintY,
     bobTokenAccountForY,
-    clientKeypair.publicKey,
+    clientKeypair,
     50
   );
 

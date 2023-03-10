@@ -51,7 +51,11 @@ export const getTerms = (): {
   aliceExpectedAmount: number;
   bobExpectedAmount: number;
 } => {
-  return JSON.parse(fs.readFileSync(`./terms.json`) as unknown as string);
+  return JSON.parse(
+    fs.readFileSync(
+      path.resolve(__dirname, `./assets/terms.json`)
+    ) as unknown as string
+  );
 };
 
 export const getTokenBalance = async (
