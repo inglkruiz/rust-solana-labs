@@ -5,8 +5,13 @@ version: '3'
 tasks:
   build:
     desc: Build the program
+    sources:
+      - src/**/*.rs
+    generates:
+      - dist/libs/programs/escrow/escrow.so
     cmds:
       - cargo build-bpf --manifest-path libs/programs/escrow/Cargo.toml --bpf-out-dir dist/libs/programs/escrow
+      - rm dist/libs/programs/escrow/escrow-keypair.json
 
   test:
     desc: Run the program tests

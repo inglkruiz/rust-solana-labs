@@ -5,28 +5,36 @@
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nrwl/esbuild:esbuild",
+      "executor": "@nrwl/webpack:webpack",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "platform": "node",
+        "target": "node",
+        "compiler": "tsc",
         "outputPath": "dist/apps/client/escrow/scripts",
-        "format": ["cjs"],
-        "bundle": false,
-        "main": "apps/client/escrow/scripts/src/main.ts",
-        "tsConfig": "apps/client/escrow/scripts/tsconfig.app.json",
-        "assets": ["apps/client/escrow/scripts/src/assets"],
-        "esbuildOptions": {
-          "sourcemap": true,
-          "outExtension": {
-            ".js": ".js"
+        "main": "apps/client/escrow/scripts/src/setup.ts",
+        "additionalEntryPoints": [
+          {
+            "entryName": "alice",
+            "entryPath": "apps/client/escrow/scripts/src/alice.ts"
+          },
+          {
+            "entryName": "bob",
+            "entryPath": "apps/client/escrow/scripts/src/bob.ts"
           }
-        }
+        ],
+        "tsConfig": "apps/client/escrow/scripts/tsconfig.app.json",
+        "assets": [
+          "apps/client/escrow/scripts/src/assets",
+          "apps/client/escrow/scripts/src/keys"
+        ],
+        "isolatedConfig": true,
+        "webpackConfig": "apps/client/escrow/scripts/webpack.config.js"
       },
       "configurations": {
         "production": {
-          "esbuildOptions": {
-            "sourcemap": false
-          }
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false
         }
       }
     },

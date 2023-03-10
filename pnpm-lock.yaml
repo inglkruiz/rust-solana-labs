@@ -29,6 +29,7 @@ importers:
       '@nrwl/workspace': 15.8.5
       '@nxrs/cargo': ^0.3.3
       '@project-serum/anchor': ^0.26.0
+      '@solana/buffer-layout': ^4.0.1
       '@solana/spl-token': ^0.3.7
       '@solana/wallet-adapter-base': ^0.9.22
       '@solana/wallet-adapter-react': ^0.15.30
@@ -40,6 +41,7 @@ importers:
       '@tailwindcss/typography': ^0.5.9
       '@testing-library/react': 14.0.0
       '@types/bn.js': ^5.1.1
+      '@types/bs58': ^4.0.1
       '@types/chai': ^4.3.4
       '@types/jest': ^29.4.0
       '@types/lodash-es': ^4.17.6
@@ -52,6 +54,7 @@ importers:
       autoprefixer: 10.4.13
       axios: ^1.0.0
       babel-jest: ^29.4.1
+      bn.js: ^5.2.1
       borsh: ^0.7.0
       bs58: ^5.0.0
       chai: ^4.3.7
@@ -99,6 +102,7 @@ importers:
       '@nestjs/platform-express': 9.3.9_77foi4w27ghy47yutmnzv7krjy
       '@noble/ed25519': 1.7.3
       '@project-serum/anchor': 0.26.0
+      '@solana/buffer-layout': 4.0.1
       '@solana/spl-token': 0.3.7_@solana+web3.js@1.73.3
       '@solana/wallet-adapter-base': 0.9.22_@solana+web3.js@1.73.3
       '@solana/wallet-adapter-react': 0.15.30_uruapgojjcawfnpag2uumqj4qu
@@ -107,6 +111,7 @@ importers:
       '@solana/web3.js': 1.73.3
       '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
       axios: 1.3.4
+      bn.js: 5.2.1
       borsh: 0.7.0
       bs58: 5.0.0
       daisyui: 2.51.3_by5iqycgvtroytm54ytclj4zzi
@@ -144,6 +149,7 @@ importers:
       '@swc/jest': 0.2.20_@swc+core@1.3.38
       '@testing-library/react': 14.0.0_biqbaboplfbrettd7655fr4n2y
       '@types/bn.js': 5.1.1
+      '@types/bs58': 4.0.1
       '@types/chai': 4.3.4
       '@types/jest': 29.4.0
       '@types/lodash-es': 4.17.6
@@ -178,6 +184,9 @@ importers:
       ts-mocha: 10.0.0_mocha@10.2.0
       ts-node: 10.9.1_kuwgosdncx244a5ts24ocpzega
       typescript: 4.9.5
+
+  libs/client/escrow/scripts:
+    specifiers: {}
 
   libs/solana-workshops/nft-minter/stores:
     specifiers:
@@ -5798,6 +5807,12 @@ packages:
       '@types/node': 18.14.2
     dev: true
 
+  /@types/bs58/4.0.1:
+    resolution: {integrity: sha512-yfAgiWgVLjFCmRv8zAcOIHywYATEwiTVccTLnRp6UxTNavT55M9d/uhK3T03St/+8/z/wW+CRjGKUNmEqoHHCA==}
+    dependencies:
+      base-x: 3.0.9
+    dev: true
+
   /@types/chai/4.3.4:
     resolution: {integrity: sha512-KnRanxnpfpjUTqTCXslZSEdLfXExwgNxYPdiO2WGUj8+HDjFi8R3k5RVKPeSCzLjCcshCAtVO2QBbVuAV4kTnw==}
     dev: true
@@ -7071,7 +7086,7 @@ packages:
   /asn1.js/5.4.1:
     resolution: {integrity: sha512-+I//4cYPccV8LdmBLiX8CYvf9Sp3vQsrqu2QNXRcrbiWvcx/UdlFiqUJJzxRQxgsZmvhXhn4cSKeSmoFjVdupA==}
     dependencies:
-      bn.js: 4.11.6
+      bn.js: 4.12.0
       inherits: 2.0.4
       minimalistic-assert: 1.0.1
       safer-buffer: 2.1.2
@@ -7473,7 +7488,6 @@ packages:
     resolution: {integrity: sha512-H7JU6iBHTal1gp56aKoaa//YUxEaAOUiydvrV/pILqIHXTtqxSkATOnDA2u+jZ/61sD+L/412+7kzXRtWukhpQ==}
     dependencies:
       safe-buffer: 5.2.1
-    dev: false
 
   /base-x/4.0.0:
     resolution: {integrity: sha512-FuwxlW4H5kh37X/oW59pwTzzTKRzfrrQwhmyspRM7swOEZcHtDZSCt45U6oKgtuFE+WYPblePMVIPR4RZrh/hw==}

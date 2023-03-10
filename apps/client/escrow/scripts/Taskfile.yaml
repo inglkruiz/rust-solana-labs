@@ -1,0 +1,38 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  start-validator:
+    desc: Start a local validator and tail the logs
+    silent: true
+    cmds:
+      - |
+        osascript -e 'tell application "iTerm2"
+          set newWindow to (create window with default profile)
+
+          tell current session of newWindow
+            split horizontally with default profile
+          end tell
+
+          tell first session of current tab of current window
+            write text "cd {{.USER_WORKING_DIR}}"
+
+            write text "solana-test-validator --reset --mint $(cat dist/apps/client/escrow/scripts/keys/id_pub.json | jq -r) --bpf-program $(cat dist/apps/client/escrow/scripts/keys/program_pub.json | jq -r) dist/libs/programs/escrow/escrow.so"
+          end tell
+          tell second session of current tab of current window
+            write text "sleep 10 && solana logs"
+          end tell
+        end tell'
+
+  build:
+    desc: Build the project
+    cmds:
+      -  pnpm exec nx run client-escrow-scripts:build
+
+  run:
+    desc: Run setup, alice and bob scripts
+    cmds:
+      -  node dist/apps/client/escrow/scripts/main.js
+      -  node dist/apps/client/escrow/scripts/alice.js
+      -  node dist/apps/client/escrow/scripts/bob.js
