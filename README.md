@@ -8,6 +8,7 @@
 
 - [client/hello-world](apps/client/hello-world/README.md): Client application borrowed from the [solana-labs/example-helloworld](https://www.github.com/solana-labs/example-helloworld) repository. It's wrapped in a NestJS standalone application.
 - [rust/http-server](apps/rust/http-server/README.md): Rust HTTP server application. Custom minimal HTTP server for understanding the basics of Rust.
+- [client/escrow/scripts](apps/client/escrow/scripts/README.md): Solana escrow client application. It's a TypeScript application with muiltiple entrypoints.
 
 ### Libs
 

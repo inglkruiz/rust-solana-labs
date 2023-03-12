@@ -54,7 +54,7 @@ const bob = async () => {
     expectedAmount: new BN(decodedEscrowLayout.expectedAmount, 10, 'le'),
   };
 
-  const PDA = await PublicKey.findProgramAddress(
+  const [pdaPublicKey] = PublicKey.findProgramAddressSync(
     [Buffer.from('escrow')],
     escrowProgramId
   );
@@ -85,7 +85,7 @@ const bob = async () => {
       },
       { pubkey: escrowStateAccountPubkey, isSigner: false, isWritable: true },
       { pubkey: TOKEN_PROGRAM_ID, isSigner: false, isWritable: false },
-      { pubkey: PDA[0], isSigner: false, isWritable: false },
+      { pubkey: pdaPublicKey, isSigner: false, isWritable: false },
     ],
   });
 

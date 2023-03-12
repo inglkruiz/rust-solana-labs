@@ -15,4 +15,4 @@ Note: for adding the generated TS types we have to run a copy command after runn
 NOTE: The following task are configured to run using `osascript` to open a terminal window (`iTerm2`). If you are not using MacOS, you can run the commands manually. Also, be sure you set up your Solana CLI, basically the URL and the keypair.
 
 - Open a terminal front the root folder of the repository. Run `task anchor:localnet` to start the Solana cluster.
-- Bild your programs. Each program folder has a `project.json` file that contains the `targets` that can be run. Using Go-task is also possible. Build and then Deploy.
+- Build your programs. Each program folder has a `project.json` file that contains the `targets` that can be run. Using Go-task is also possible. Build and then Deploy.
